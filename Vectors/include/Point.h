@@ -12,6 +12,9 @@ public:
     double getX() const;
     double getY() const;
     double getZ() const;
+    void setX(double d);
+    void setY(double d);
+    void setZ(double d);
 
     bool operator==(const Point& b) const;
 

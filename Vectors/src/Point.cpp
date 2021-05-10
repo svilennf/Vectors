@@ -17,6 +17,16 @@ double Point::getZ() const{
     return z;
 }
 
+void Point::setX(double d){
+    x = d;
+}
+void Point::setY(double d){
+    y = d;
+}
+void Point::setZ(double d){
+    z = d;
+}
+
 bool Point::operator==(const Point& b) const{ //dont fking know why this doesn't work
     return (x == b.getX());
 

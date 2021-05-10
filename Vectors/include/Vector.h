@@ -3,7 +3,7 @@
 
 #include "Point.h"
 
-class Vector
+class Vector : public Point
 {
 private:
     double i;
@@ -18,6 +18,16 @@ public:
     double getI() const;
     double getJ() const;
     double getK() const;
+
+    double lenght() const;
+
+    Vector direction() const;
+
+    bool isNullVector() const;
+
+    bool isParallel(Vector v) const;
+
+    bool isPerpendicular(Vector v) const;
 
 
 };
