@@ -29,6 +29,18 @@ public:
 
     bool isPerpendicular(Vector v) const;
 
+    Vector addition(Vector v) const;
+
+    Vector subtraction(Vector v) const;
+
+    Vector multiplication(double r) const;
+
+    double scalarMultiplication(Vector v) const;
+
+    Vector vectorMultiplication(Vector v) const;
+
+    double mixedMultiplication(Vector v1, Vector v2) const;
+
 
 };
 

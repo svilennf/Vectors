@@ -48,8 +48,33 @@ bool Vector::isParallel(Vector v) const{
 }
 
 bool Vector::isPerpendicular(Vector v) const{
-    return (i*v.getI() + j*v.getJ + k*v.getK() == 0);
+    return (i*v.getI() + j*v.getJ() + k*v.getK() == 0);
     //TODO: Throw VectorLengthException if len = 0
 }
+
+Vector Vector::addition(Vector v) const{
+    return Vector(i+v.getI(), j + v.getJ(), k+ v.getK());
+}
+
+Vector Vector::subtraction(Vector v) const{
+    return Vector(i - v.getI(), j - v.getJ(), k - v.getK());
+}
+
+Vector Vector::multiplication(double r) const{
+    return Vector(i * r, j * r, k * r);
+}
+
+double Vector::scalarMultiplication(Vector v) const{
+    return (i * v.getI() + j * v.getJ() + k * v.getK());
+}
+
+Vector Vector::vectorMultiplication(Vector v) const{
+    return Vector(j * v.getK() - k * v.getJ(), k * v.getI() - i*v.getK(), i*v.getJ()-j*v.getI());
+}
+
+double Vector::mixedMultiplication(Vector v1, Vector v2) const{
+    return(v2.scalarMultiplication(vectorMultiplication(v1)));
+}
+
 
 Vector::~Vector(){}
