@@ -19,22 +19,23 @@
 1620576437 c:\users\pc-admin\desktop\vectors\include\vector.h
 	"Point.h"
 
-1620667530 source:c:\users\pc-admin\desktop\vectors_repo\vectors\main.cpp
+1622126607 source:c:\users\pc-admin\desktop\vectors_repo\vectors\main.cpp
 	<iostream>
 	"Point.h"
 	"Vector.h"
 
 1620660017 c:\users\pc-admin\desktop\vectors_repo\vectors\include\point.h
 
-1620832676 c:\users\pc-admin\desktop\vectors_repo\vectors\include\vector.h
+1622131521 c:\users\pc-admin\desktop\vectors_repo\vectors\include\vector.h
 	"Point.h"
 
-1620660017 source:c:\users\pc-admin\desktop\vectors_repo\vectors\src\point.cpp
+1622126632 source:c:\users\pc-admin\desktop\vectors_repo\vectors\src\point.cpp
 	"Point.h"
 	<iostream>
 
-1620667503 source:c:\users\pc-admin\desktop\vectors_repo\vectors\src\vector.cpp
+1622131292 source:c:\users\pc-admin\desktop\vectors_repo\vectors\src\vector.cpp
 	"Vector.h"
 	<math.h>
 	<iostream>
+	<string.h>
 

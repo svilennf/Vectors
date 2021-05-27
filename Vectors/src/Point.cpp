@@ -27,9 +27,5 @@ void Point::setZ(double d){
     z = d;
 }
 
-bool Point::operator==(const Point& b) const{ //dont fking know why this doesn't work
-    return (x == b.getX());
-
-}
 
 //return ((a.getX() == b.getX()) && (a.getY() == b.getY()) && (a.getY() == b.getY()));

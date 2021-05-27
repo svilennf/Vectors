@@ -2,8 +2,15 @@
 
 #include <math.h>
 #include <iostream>
+#include <string.h>
 
 using namespace std;
+
+class VectorLenghtException : public logic_error {
+public:
+    VectorLenghtException(string reason);
+};
+VectorLenghtException::VectorLenghtException(string reason): logic_error(reason){}
 
 Vector::Vector(): i(0.0), j(0.0), k(0.0) {}
 
@@ -34,8 +41,10 @@ double Vector::lenght() const{
 }
 
 Vector Vector::direction() const{
+    if(lenght() == 0){
+        throw VectorLenghtException("Lenght is 0!");
+    }
     return Vector(i/lenght(), j/lenght(), k/lenght());
-    //TODO: Throw VectorLengthException if len = 0
 }
 
 bool Vector::isNullVector() const{
@@ -43,13 +52,17 @@ bool Vector::isNullVector() const{
 }
 
 bool Vector::isParallel(Vector v) const{
+    if(lenght() == 0 || v.lenght() == 0){
+        throw VectorLenghtException("Lenght is 0!");
+    }
     return (i/v.getI() == j/v.getJ()) && (i/v.getI() == k/v.getK());
-    //TODO: Throw VectorLengthException if len = 0
 }
 
 bool Vector::isPerpendicular(Vector v) const{
+    if(lenght() == 0 || v.lenght() == 0){
+        throw VectorLenghtException("Lenght is 0!");
+    }
     return (i*v.getI() + j*v.getJ() + k*v.getK() == 0);
-    //TODO: Throw VectorLengthException if len = 0
 }
 
 Vector Vector::addition(Vector v) const{

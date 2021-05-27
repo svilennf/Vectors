@@ -41,6 +41,17 @@ public:
 
     double mixedMultiplication(Vector v1, Vector v2) const;
 
+    Vector operator+(Vector v) const;
+
+    Vector operator-(Vector v) const;
+
+    Vector operator*(double r) const;
+
+    double operator*(Vector v) const;
+
+    Vector operator^(Vector v) const;
+
+    double operator()(Vector v1, Vector v2) const;
 
 };
 
