@@ -1,7 +1,7 @@
 #ifndef POINT_H
 #define POINT_H
 
-class Point{
+class Point {
 private:
     double x;
     double y;
@@ -12,6 +12,8 @@ public:
     double getX() const;
     double getY() const;
     double getZ() const;
+    double getDistance(Point& a) const;
+
     void setX(double d);
     void setY(double d);
     void setZ(double d);
